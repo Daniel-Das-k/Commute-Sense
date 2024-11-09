@@ -14,7 +14,7 @@ server/services
 server/.env
 server/index.ts
 server/app.ts
-server/notification.ts
+
 
 
 node_modules
