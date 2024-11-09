@@ -55,7 +55,7 @@ const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042']
 export default function EnhancedAnalyticsPage() {
   return (
     <div className="mx-auto p-4 bg-white dark:bg-gray-900 min-h-screen">
-      <h1 className="text-4xl font-bold mb-8 text-gray-800 dark:text-gray-100">DTC Analytics Dashboard</h1>
+      <h1 className="text-4xl font-bold mb-8 text-gray-800 dark:text-gray-100">Analytics Dashboard</h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
         {kpiData.map((item, index) => (

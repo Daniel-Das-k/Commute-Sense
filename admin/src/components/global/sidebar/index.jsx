@@ -8,6 +8,7 @@ import {
   StopCircle,
   ShoppingCart,
   Users,
+  ChartAreaIcon
 } from "lucide-react"
 import NavigationLink from "../NavigationLink"
 import { FaDirections } from "react-icons/fa"
@@ -21,7 +22,7 @@ function Sidebar() {
           <div className="flex h-14 items-center border-b px-4 lg:h-[60px] lg:px-6">
             <NavigationLink href="" className="flex items-center gap-2 font-semibold">
               <Package2 className="h-6 w-6" />
-              <span className="">UNFAZED</span>
+              <span className="">CommuteSense</span>
             </NavigationLink>
           </div>
           <div className="flex-1">
@@ -40,7 +41,7 @@ function Sidebar() {
                 className="flex items-center gap-3 rounded-lg px-3 py-2 transition-all hover:text-primary"
               >
                 <BusIcon className="h-4 w-4" />
-                Bus
+                Transport
               </NavigationLink>
               <NavigationLink
                 isActiveClass='bg-muted'
@@ -72,8 +73,32 @@ function Sidebar() {
                 className="flex items-center gap-3 rounded-lg px-3 py-2 transition-all hover:text-primary"
               >
                 <LineChart className="h-4 w-4" />
-                Sheduling
+                Optimization
               </NavigationLink>
+              <NavigationLink
+                isActiveClass='bg-muted'
+                href="/chatbot"
+                className="flex items-center gap-3 rounded-lg px-3 py-2 transition-all hover:text-primary"
+              >
+                <ChartAreaIcon className="h-4 w-4" />
+                Chatbot
+              </NavigationLink>
+              <NavigationLink
+                isActiveClass='bg-muted'
+                href="/scheduling"
+                className="flex items-center gap-3 rounded-lg px-3 py-2 transition-all hover:text-primary"
+              >
+                <ChartAreaIcon className="h-4 w-4" />
+                 Scheduling
+              </NavigationLink>
+              {/* <NavigationLink
+                isActiveClass='bg-muted'
+                href="/notification"
+                className="flex items-center gap-3 rounded-lg px-3 py-2 transition-all hover:text-primary"
+              >
+                <LineChart className="h-4 w-4" />
+                notification
+              </NavigationLink> */}
               {/* <NavigationLink
                 isActiveClass='bg-muted'
                 href="/analytics"

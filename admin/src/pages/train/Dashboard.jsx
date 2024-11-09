@@ -15,7 +15,7 @@ const BusCard = ({ bus }) => {
     }}>
       <CardContent className="p-4">
         <div className="flex justify-between items-center mb-2">
-          <span className="font-bold">Bus {bus.id}</span>
+          <span className="font-bold">Train {bus.id}</span>
           <Button variant="ghost" size="icon">
             <MoreVertical className="h-4 w-4" />
           </Button>
@@ -79,9 +79,7 @@ function BusFleetDashboard() {
           <div className="space-y-4">
             {[
               { label: 'Total Buses', value: 50 },
-              { label: 'Total Trains', value: 40 },
               { label: 'Active Buses', value: 42 },
-              { label: 'Active Trains', value: 32 },
               { label: 'On Route', value: 36 },
               { label: 'In Maintenance', value: 3 },
               { label: 'Idle', value: 3 },
@@ -104,16 +102,16 @@ function BusFleetDashboard() {
           <div className="flex space-x-2">
             <Button variant="outline" size="sm">
               <Bus className="h-4 w-4 mr-2" />
-              Buses
+              Trains
             </Button>
             <Button variant="outline" size="sm">
               <MapPin className="h-4 w-4 mr-2" />
               Routes
             </Button>
-            <Button variant="outline" size="sm">
+            {/* <Button variant="outline" size="sm">
               <Users className="h-4 w-4 mr-2" />
               Drivers
-            </Button>
+            </Button> */}
           </div>
           <div className="flex items-center space-x-2">
             <Select>
@@ -146,7 +144,6 @@ function BusFleetDashboard() {
           <div className="space-y-4">
             {[
               { type: 'Delay', message: 'Bus 1002 is running 15 minutes late on Route 2' },
-              { type: 'Delay', message: 'Train 345 is running 5 minutes late on platform 2' },
               { type: 'Maintenance', message: 'Bus 1003 requires immediate maintenance check' },
               { type: 'Route Change', message: 'Route 3 diverted due to road work on Main Street' },
               { type: 'Weather', message: 'Heavy rain expected, prepare for potential delays' },

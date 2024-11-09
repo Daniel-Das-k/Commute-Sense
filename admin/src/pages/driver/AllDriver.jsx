@@ -20,6 +20,7 @@ const driversData = [
   { id: 8, name: "Lisa Taylor", status: "Active", currentShift: "Morning", lastActive: "2023-06-15 07:50", completedTrips: 1300, rating: 4.7 },
   { id: 9, name: "Mark Robinson", status: "Active", currentShift: "Afternoon", lastActive: "2023-06-15 14:30", completedTrips: 950, rating: 4.6 },
   { id: 10, name: "Amy White", status: "Inactive", currentShift: "N/A", lastActive: "2023-06-14 20:15", completedTrips: 800, rating: 4.5 },
+  { id: 11, name: "Daniel", status: "Active", currentShift: "N/A", lastActive: "2024-11-09 20:15", completedTrips: 0, rating: 0 },
 ]
 
 

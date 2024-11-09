@@ -15,6 +15,9 @@ import { getAllDriver } from '@/store/reducer/DriverStore';
 import { getAllRoute } from '@/store/reducer/RouteReducer';
 import BusSchedulingDashboard from './sheduling/Sheduling';
 import AnalyticsPage from './analytics/Analytics';
+import { Train } from 'lucide-react';
+import Chatbot from './Chatbot';
+import Scheduling from './Schedule';
 
 
 const Main = () => {
@@ -36,7 +39,10 @@ const Main = () => {
                     <Routes>
                         <Route element={<Dashboard />} path='/' />
                         <Route element={<Bus />} path='/bus/*' />
+                        <Route element={<Chatbot />} path='/chatbot/*' />
+                        <Route element={<Scheduling />} path='/scheduling/*' />
                         <Route element={<Stop/>} path="/stop/*"/>
+                        {/* <Route element={<Notification />} path='/notification/*' /> */}
                         <Route element={<Driver/>} path="/driver/*"/>
                         <Route element={<BusSchedulingDashboard/>} path="/sheduling/*"/>
                         <Route element={<AnalyticsPage/>} path="/analytics/*"/>

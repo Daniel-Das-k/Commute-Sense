@@ -55,7 +55,7 @@ export default function Header({ props }) {
                                     <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
                                     <AvatarFallback>CN</AvatarFallback>
                                 </Avatar>
-                                <p>Hursun</p>
+                                <p>Fazil</p>
                             </div>
                         </DropdownMenuTrigger>
                         <DropdownMenuContent className="w-20">
