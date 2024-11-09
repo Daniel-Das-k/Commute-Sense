@@ -16,27 +16,26 @@ These inefficiencies impact both commuters and transportation authorities, neces
 # Proposed Solution: 
 ## Compute Sense
 
-### Compute Sense is a cutting-edge AI-driven solution designed to provide intelligent insights and enhance the efficiency of systems through real-time data processing and machine learning algorithms. The platform integrates computer vision, natural language processing (NLP), and predictive analytics to automate complex tasks, streamline workflows, and improve decision-making across various industries.
+ Compute Sense is a cutting-edge AI-driven solution designed to provide intelligent insights and enhance the efficiency of systems through real-time data processing and machine learning algorithms. The platform integrates computer vision, natural language processing (NLP), and predictive analytics to automate complex tasks, streamline workflows, and improve decision-making across various industries.
 
 
 ## Features
 
-### Real-time Data Processing: Ingest and analyze live data streams from various sources, providing actionable insights on the go.
-## Machine Learning Integration: Leverages ML models for predictive analytics, anomaly detection, and optimization of business processes.
-## Computer Vision: Utilize computer vision models for object detection, recognition, and classification, applicable in sectors such as security, retail, and manufacturing.
-## Natural Language Processing: Provides advanced text analysis capabilities, including sentiment analysis, topic modeling, and text summarization.
-## Scalable: Built to handle large datasets and can scale to meet enterprise-level requirements.
+**Real-time Data Processing**: Ingest and analyze live data streams from various sources, providing actionable insights on the go.
+**Machine Learning Integration**: Leverages ML models for predictive analytics, anomaly detection, and optimization of business processes.
+**Computer Vision**: Utilize computer vision models for object detection, recognition, and classification, applicable in sectors such as security, retail, and manufacturing.
+**Natural Language Processing**: Provides advanced text analysis capabilities, including sentiment analysis, topic modeling, and text summarization.
+**Scalable**: Built to handle large datasets and can scale to meet enterprise-level requirements.
 
 
 ## Technologies Used
 
-### Python: Primary programming language for backend services.
-### TensorFlow/Keras: Framework for developing and deploying machine learning models.
-### OpenCV: For implementing computer vision functionalities.
-### Flask: Web frameworks used for building API services.
-### Docker: Containerization for easy deployment and scalability.
-### MongoDB: Database solutions for storing structured data.
-
+**Python**: Primary programming language for backend services.
+**TensorFlow**: Framework for developing and deploying machine learning models.
+**OpenCV**: For implementing computer vision functionalities.
+**Flask**: Web frameworks used for building API services.
+**Docker**: Containerization for easy deployment and scalability.
+**MongoDB**: Database solutions for storing structured data.
 
 
 ## Installation
@@ -80,9 +79,9 @@ These inefficiencies impact both commuters and transportation authorities, neces
 
 
 ## Impact of the Solution
-### The AI-driven solution will:
+**The AI-driven solution will**:
 
-#### Improve passenger experience with reduced wait times.
-#### Optimize resource usage, cutting operational costs.
-#### Reduce environmental impact through efficient routing.
-#### Support sustainable urban mobility by making public transport more reliable.
+- Improve passenger experience with reduced wait times.
+- Optimize resource usage, cutting operational costs.
+- Reduce environmental impact through efficient routing.
+- Support sustainable urban mobility by making public transport more reliable.
