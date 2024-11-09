@@ -6,7 +6,6 @@ sort
 personcount.py
 commutesense
 scheule.py
-admin
 server/errors
 server/middleware
 server/models
@@ -22,7 +21,5 @@ admin/public
 admin/src
 admin/components.json
 admin/index.html
-admin/tailwind.config.js
 node_modules
-admin/vite.config.js
 env
