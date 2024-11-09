@@ -1,4 +1,4 @@
-## Commute-Sense(Solution)
+# Commute-Sense(Solution)
 # AI-Driven Dynamic Public Transportation Scheduler
 
 Efficiently managing public transportation in urban areas is a significant challenge, especially with fluctuating commuter demand, traffic variations, and unexpected events. This project aims to develop an AI-driven platform that autonomously schedules and dispatches public transport vehicles, ensuring dynamic adaptability and optimized efficiency.
