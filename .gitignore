@@ -9,8 +9,6 @@ scheule.py
 server/errors
 server/middleware
 server/models
-server/routes
-server/services
 server/.env
 
 node_modules
