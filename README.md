@@ -83,3 +83,42 @@ Develop an AI-based platform that autonomously manages the scheduling, routing, 
    git clone https://github.com/Daniel-Das-k/Commute-Sense
    cd computesense
    ```
+
+2. **Create a Virtual Environment:**
+   ```bash
+   python3 -m venv EduSage
+   source EduSage/bin/activate   # On Windows: `env\Scripts\activate`
+   ```
+
+3. **Install Dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Set Up Environment Variables:**
+   Create a `.env` file in the root directory with the necessary API keys and configuration settings.
+
+5. **front-end Application:**
+   ```bash
+   cd admin
+   npm i 
+   npm run dev
+   ```
+
+6. **Back-end Application:**
+    ```bash
+   cd backend
+   python app.py
+   ```
+
+7. **Access the Application:**
+   Open your browser and navigate to `http://127.0.0.1:5000/`.
+
+
+## Impact of the Solution
+### The AI-driven solution will:
+
+#### Improve passenger experience with reduced wait times.
+#### Optimize resource usage, cutting operational costs.
+#### Reduce environmental impact through efficient routing.
+#### Support sustainable urban mobility by making public transport more reliable.
