@@ -12,10 +12,6 @@ server/models
 server/routes
 server/services
 server/.env
-server/index.ts
-server/app.ts
-
-
 
 node_modules
 env
