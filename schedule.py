@@ -1,17 +1,22 @@
+from flask import Flask, jsonify
+from flask_cors import CORS
 import pandas as pd
 import random
 from datetime import datetime
 
-# Convert the arrival times to datetime objects
+app = Flask(__name__)
+CORS(app)  
+
 def time_to_datetime(time_str):
     return datetime.strptime(time_str, '%I:%M %p')
 
-# Load the existing bus route data from the CSV file
 df = pd.read_csv('03STL_updated.csv')
 
 # New bus allotment times
-new_bus_times = [time_to_datetime('06:10 AM'), time_to_datetime('06:40 AM'), time_to_datetime('07:20 AM'),
-                 time_to_datetime('07:30 AM'), time_to_datetime('07:40 AM'), time_to_datetime('07:50 AM')]
+new_bus_times = [
+    time_to_datetime('06:10 AM'), time_to_datetime('06:40 AM'), time_to_datetime('07:20 AM'),
+    time_to_datetime('07:30 AM'), time_to_datetime('07:40 AM'), time_to_datetime('07:50 AM')
+]
 
 # Convert the relevant arrival time columns to datetime
 arrival_time_columns = ['Arrival Time'] + [f'Arrival Time Bus {i}' for i in range(2, 8)]
@@ -20,6 +25,7 @@ for col in arrival_time_columns:
 
 # Function to track the bus along the route
 def track_bus(df, start_time, bus_id, arrival_time_column):
+    output = []
     bus_capacity = 0
     max_capacity = 50  # Maximum bus capacity
 
@@ -40,30 +46,38 @@ def track_bus(df, start_time, bus_id, arrival_time_column):
         
         bus_capacity += new_passengers
         
-        print(f"Bus {bus_id} reached {row['Stop Name']} at {current_arrival_time.strftime('%I:%M %p')}.")
-        print(f"{passengers_getting_off} passengers got off, {new_passengers} new passengers got on.")
-        print(f"Total passengers: {bus_capacity}")
+        output.append(f"Bus {bus_id} reached {row['Stop Name']} at {current_arrival_time.strftime('%I:%M %p')}.")
+        output.append(f"{passengers_getting_off} passengers got off, {new_passengers} new passengers got on.")
+        output.append(f"Total passengers: {bus_capacity}")
         
         # Check if the current time matches a new bus allotment time
         if current_arrival_time == start_time:
             if bus_capacity > 10:  # Threshold for deciding if a new bus is needed
-                print("-------------------------------")
-                print(f"New bus {bus_id} allotted at {current_arrival_time.strftime('%I:%M %p')} due to sufficient passengers in the existing bus.")
-                print("-------------------------------")
-                return True  # Return True if a new bus is allotted
+                output.append("-------------------------------")
+                output.append(f"New bus {bus_id} allotted at {current_arrival_time.strftime('%I:%M %p')} due to sufficient passengers in the existing bus.")
+                output.append("-------------------------------")
+                return output, True  # Return output and True if a new bus is allotted
             else:
-                print("-------------------------------")
-                print(f"New bus {bus_id} skipped at {current_arrival_time.strftime('%I:%M %p')} due to low passenger count.")
-                print("-------------------------------")
-                return False  # Return False if no new bus is needed
+                output.append("-------------------------------")
+                output.append(f"New bus {bus_id} skipped at {current_arrival_time.strftime('%I:%M %p')} due to low passenger count.")
+                output.append("-------------------------------")
+                return output, False  # Return output and False if no new bus is needed
 
-    return False  # Return False if no new bus is needed throughout the route
+    return output, False  # Return output and False if no new bus is needed throughout the route
 
-# Iterate over the new bus allotment times and track each bus using their specific arrival time column
-bus_id = 1
-for start_time, arrival_time_column in zip(new_bus_times, arrival_time_columns):
-    print(f"Tracking Bus {bus_id} from starting point...")
-    if track_bus(df, start_time, bus_id, arrival_time_column):
-        bus_id += 1  # Increment bus ID for the next bus
+@app.route('/track_buses', methods=['GET'])
+def track_buses():
+    output = []
+    bus_id = 1
+    for start_time, arrival_time_column in zip(new_bus_times, arrival_time_columns):
+        output.append(f"Tracking Bus {bus_id} from starting point...")
+        bus_output, new_bus_allotted = track_bus(df, start_time, bus_id, arrival_time_column)
+        output.extend(bus_output)
+        if new_bus_allotted:
+            bus_id += 1  # Increment bus ID for the next bus
+    output.append("All buses tracked.")
+    
+    return jsonify(output)  # Return the output as JSON
 
-print("All buses tracked.")
+if __name__ == '__main__':
+    app.run(debug=True)
