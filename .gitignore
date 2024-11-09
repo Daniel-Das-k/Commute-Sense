@@ -15,7 +15,7 @@ server/.env
 server/index.ts
 server/app.ts
 server/notification.ts
-server/socket.ts
-server/tsconfig.json
+
+
 node_modules
 env
