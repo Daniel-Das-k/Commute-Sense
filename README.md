@@ -21,11 +21,11 @@ These inefficiencies impact both commuters and transportation authorities, neces
 
 ## Features
 
-**Real-time Data Processing**: Ingest and analyze live data streams from various sources, providing actionable insights on the go.
-**Machine Learning Integration**: Leverages ML models for predictive analytics, anomaly detection, and optimization of business processes.
-**Computer Vision**: Utilize computer vision models for object detection, recognition, and classification, applicable in sectors such as security, retail, and manufacturing.
-**Natural Language Processing**: Provides advanced text analysis capabilities, including sentiment analysis, topic modeling, and text summarization.
-**Scalable**: Built to handle large datasets and can scale to meet enterprise-level requirements.
+- **Real-time Data Processing**: Ingest and analyze live data streams from various sources, providing actionable insights on the go.
+- **Machine Learning Integration**: Leverages ML models for predictive analytics, anomaly detection, and optimization of business processes.
+- **Computer Vision**: Utilize computer vision models for object detection, recognition, and classification, applicable in sectors such as security, retail, and manufacturing.
+- **Natural Language Processing**: Provides advanced text analysis capabilities, including sentiment analysis, topic modeling, and text summarization.
+- **Scalable**: Built to handle large datasets and can scale to meet enterprise-level requirements.
 
 
 ## Technologies Used
