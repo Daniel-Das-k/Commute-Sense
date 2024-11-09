@@ -19,7 +19,5 @@ server/socket.ts
 server/tsconfig.json
 admin/public
 admin/src
-admin/components.json
-admin/index.html
 node_modules
 env
