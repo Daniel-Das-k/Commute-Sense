@@ -7,8 +7,6 @@ personcount.py
 commutesense
 scheule.py
 server/errors
-server/middleware
-server/models
 server/.env
 
 node_modules
