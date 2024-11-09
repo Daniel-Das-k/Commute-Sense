@@ -30,12 +30,12 @@ These inefficiencies impact both commuters and transportation authorities, neces
 
 ## Technologies Used
 
-**Python**: Primary programming language for backend services.
-**TensorFlow**: Framework for developing and deploying machine learning models.
-**OpenCV**: For implementing computer vision functionalities.
-**Flask**: Web frameworks used for building API services.
-**Docker**: Containerization for easy deployment and scalability.
-**MongoDB**: Database solutions for storing structured data.
+- **Python**: Primary programming language for backend services.
+- **TensorFlow**: Framework for developing and deploying machine learning models.
+- **OpenCV**: For implementing computer vision functionalities.
+- **Flask**: Web frameworks used for building API services.
+- **Docker**: Containerization for easy deployment and scalability.
+- **MongoDB**: Database solutions for storing structured data.
 
 
 ## Installation
