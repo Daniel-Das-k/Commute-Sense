@@ -17,7 +17,5 @@ server/app.ts
 server/notification.ts
 server/socket.ts
 server/tsconfig.json
-admin/public
-admin/src
 node_modules
 env
